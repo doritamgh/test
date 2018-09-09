@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "scripts": {
+    "prod": "gulp --production",
+    "dev": "npm run developement"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "laravel-elixir": "^5.0.0",
+    "bootstrap-sass": "^3.0.0"
+  },
+  "dependencies": {
+    "admin-lte": "^2.4.8",
+    "bootstrap": "^4.1.3",
+    "install": "^0.12.1",
+    "js": "^0.1.0"
+  }
+}
