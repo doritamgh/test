@@ -1,13 +1,6 @@
 @extends('layouts.master')
 @section('content')
-<div class="panel-heading">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <div class="panel-heading">ADD</div>	
-
-
-
-			@if ($errors->any())
+@if ($errors->any())
 			    <div class="alert alert-danger btn-sml">
 			        <ul>
 			            @foreach ($errors->all() as $error)
@@ -16,63 +9,152 @@
 			        </ul>
 			    </div><br />
 			@endif
-			
-			<form action="{{route('create')}}" method="post">
+<div class="panel-heading">
+    <div class="row">
+      
+
+	</div>
+</div>
+
+<div class="m-portlet m-portlet--tab">
+	<div class="m-portlet__head">
+		<div class="m-portlet__head-caption">
+			<div class="m-portlet__head-title">
+				<span class="m-portlet__head-icon m--hide">
+					<i class="la la-gear"></i>
+				</span>
+				<h3 class="m-portlet__head-text">
+					test add
+				</h3>
+			</div>
+		</div>
+	</div>
+	<!--begin::Form-->
+	<form class="m-form m-form--fit m-form--label-align-right" action="{{route('create')}}" method="POST">
 				{{ csrf_field() }}
-				<!--label for="title"> cin </label-->	
-				 
-				<input type="text" name="cin" class="form-control" id="cin" placeholder="Cin">
+		
+		<div class="m-portlet__body">
+			<div class="form-group m-form__group">
+				<label for="cin">
+					Cin
+				</label>
+				<input type="text" class="form-control m-input m-input--square" id="cin" name="cin"  aria-describedby="emailHelp" placeholder="Cin">
+				
+			</div>
+			<div class="form-group m-form__group">
+				<label for="nom">
+					Nom
+				</label>
+				<input type="text" class="form-control m-input m-input--square" id="nom" name="nom" placeholder="Nom">
+			</div>
 
-				<label for="nom"> nom </label>
-				<input type="text" name="nom" class="form-control" id="nom">
+			<div class="form-group m-form__group">
+				<label for="prenom">
+					Prenom
+				</label>
+				<input type="text" class="form-control m-input m-input--square" id="prenom"  name="prenom" placeholder="Prenom">
+			</div>
 
-			   	<label for="title"> prenom</label>
-				<input type="text" name="prenom" class="form-control" id="prenom">
+			
+			<div class="form-group m-form__group">
+				<label for="tel">
+					Telephone
+				</label>
+				<input type="text" class="form-control m-input m-input--square" id="tel" name="tel" placeholder="telephone">
+			</div>
 
-				<label for="title"> telephone</label>
-				<input type="text" name="tel" class="form-control" id="tel">
+			<div class="form-group m-form__group">
+				<label for="mail">
+					Email
+				</label>
+				<input type="email" class="form-control m-input m-input--square" id="mail"  name="mail" placeholder="Email">
+			</div>
+
+			<div class="form-group m-form__group">
+				<label for="etablissment">
+					etablissment
+				</label>
+				<input type="text" class="form-control m-input m-input--square" id="etablissment" name="etablissment" placeholder="Etablissment">
+			</div>
 
 
-				<label for="title">Mail</label>
-				<input type="text" name="mail" class="form-control" id="mail">
-
-				<label for="title"> Service </label>
+			<div class="form-group m-form__group">
+            <label for="title"> Service </label>
                  <select class="form-control" id="departement" name="departement">
                  	@foreach($services as $srv)
 			    	<option value="{{$srv->id}}" >{{$srv->nomService}}</option>
 			    	@endforeach
 			  	</select>      
+			</div>
 
+			<div class="form-group m-form__group">
+				<label for="duree">
+					Durée
+				</label>
+				<select class="form-control m-input" id="duree" name="duree">
+					<option value="1">
+						1
+					</option>
+					<option value="2">
+						2
+					</option>
+					<option value="3">
+						3
+					</option>
+					<option value="4">
+						4
+					</option>
+					<option value="5">
+						5
+					</option>
+					<option value="6">
+						6
+					</option>
+				</select>
+			</div>
+
+			<div class="form-group m-form__group">
+			<label for="typeS">Type de stage:</label>
+			    <select class="form-control" id="typeS" name="typeS">
+			    	<option value="observation" >Observation</option>
+				    <option value="finEtude">Fin d etude</option>
+				    <option value="application">Application</option>
+				    <option value="technicien">Technicien</option>
+			  	</select>
+			</div>
+
+			<div class="form-group m-form__group">	
 				<label for="title"> encadrant </label>
                  <select class="form-control" id="encadrant" name="encadrant">
                  	@foreach($encadrants as $enc)
 			    	<option value="{{$enc->id}}" >{{$enc->nom}}</option>
 			    	@endforeach
-			  	</select>                  
+			  	</select>     
+			</div>
 
-                <label for="typeS">Type de stage:</label>
-			    <select class="form-control" id="typeS" name="typeS">
-			    	<option value="observation" >Observation</option>
-				    <option value="finEtude">Fin d'etude</option>
-				    <option value="application">Application</option>
-				    <option value="technicien">Technicien</option>
-			  	</select>
+			<div class="form-group m-form__group">
+				<input class="form-control m-input" type="date"  id="datedeb" name="datedeb">
+			</div>
 
-                <label for="title"> durée </label>
-				<input type="text" name="duree" class="form-control" id="duree">
-				<label for="title"> date debut </label>
-				<input type="date" name="datedeb" class="form-control" id="datedeb">
+			
+			<div class="form-group m-form__group">
+				<input class="form-control m-input" type="date" id="datedeb" name="datefin">
+			</div>
 
-
-				<label for="title"> date fin </label>
-				<input type="date" name="datefin" class="form-control" id="datefin">
-
-				<label for="title"> etablissement </label>
-				<input type="text" name="etablissment" class="form-control" id="etablissment">
-
-                <button class="btn btn-sml" type="submit">enregistrer</button>
-			</form>
 		</div>
-	</div>
+		<div class="m-portlet__foot m-portlet__foot--fit">
+			<div class="m-form__actions">
+				<button type="submit" class="btn btn-primary">
+					Submit
+				</button>
+				<button type="reset" class="btn btn-secondary">
+					Cancel
+				</button>
+			</div>
+		</div>
+	</form>
+	
 </div>
+
+
 @endsection

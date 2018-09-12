@@ -1,17 +1,16 @@
 @extends('layouts.master')
 
-@section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
+@section('customCSS')
+    <link href="{{ asset('assets/vendors/custom/datatables/datatables.bundle.css') }}" rel="stylesheet" type="text/css" />
+@endsection
 
-                <div class="panel-body">
-                  @include('stagiaire.all')
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+@section('content')    
+            @include('stagiaire.all')
+@endsection
+
+@section('customJS')
+	<script src="{{asset('assets/vendors/custom/datatables/datatables.bundle.js')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/demo/default/custom/crud/datatables/extensions/buttons.js')}}" type="text/javascript"></script>
+    <script src="{{asset('assets/demo/default/base/scripts.bundle.js')}}" type="text/javascript"></script>
 @endsection

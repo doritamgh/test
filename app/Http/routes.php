@@ -16,6 +16,11 @@ Route::get('/', function () {
 });
 
 
+Route::get('/home', function () {
+    return view('stagiaire.home');
+});
+
+
 Route::get('/test', function () {
     return view('stagiaire.test');
 });
@@ -43,6 +48,14 @@ Route::post('/stagiaire/create',[
 	'uses'=>'Stagiairecontroller@create',
 	'as'=>'create',
 ]);
+
+
+
+Route::get('/stagiaire/delete',[
+	'uses'=>'StagiaireController@delete',
+	'as'=>'delete',
+]);
+
 
 
 Route::get('/stagiaire/showstag/{id}',[

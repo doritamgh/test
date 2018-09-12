@@ -33,6 +33,18 @@ public function showstag($id)
 		return view('stagiaire.read', compact('stagview'));
 	}
 
+
+
+	public function delete(Request $request)
+	{
+        $stagdelete = Stagiaire::find($request['id']);
+
+		$stagdelete->delete();
+
+		return redirect('home');
+	}
+
+
 public function edit($id)
 
 	{
@@ -45,7 +57,7 @@ public function edit($id)
     public function create(Request $request) 
     {	
     	$this->validate($request, [
-    		'cin' => 'required',
+    		'cin' => 'required|unique:stagiaires',
     		'nom' => 'required',
     		'prenom' => 'required',
     		'tel' => 'required|numeric',

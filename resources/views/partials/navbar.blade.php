@@ -5,7 +5,7 @@
             <div class="m-stack__item m-brand  m-brand--skin-light " style="background: #fff;">
                 <div class="m-stack m-stack--ver m-stack--general">
                     <div class="m-stack__item m-stack__item--middle m-brand__logo">
-                        <a href="index.html" class="m-brand__logo-wrapper">
+                        <a href="\home" class="m-brand__logo-wrapper">
                             <img alt="" src="{{asset('assets/demo/demo12/media/img/logo.png')}}" />
                         </a>
                     </div>
@@ -36,14 +36,12 @@
             </div>
             <!-- END: Brand -->
             <div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
-                
+
                 <!-- BEGIN: Topbar -->
                 <div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
                     <div class="m-stack__item m-topbar__nav-wrapper">
                         <ul class="m-topbar__nav m-nav m-nav--inline">
-                            <li class="
-	m-nav__item m-dropdown m-dropdown--large m-dropdown--arrow m-dropdown--align-center m-dropdown--mobile-full-width m-dropdown--skin-light	m-list-search m-list-search--skin-light"
-                                m-dropdown-toggle="click" id="m_quicksearch" m-quicksearch-mode="dropdown" m-dropdown-persistent="1">
+                            <li class="m-nav__item m-dropdown m-dropdown--large m-dropdown--arrow m-dropdown--align-center m-dropdown--mobile-full-width m-dropdown--skin-light	m-list-search m-list-search--skin-light" m-dropdown-toggle="click" id="m_quicksearch" m-quicksearch-mode="dropdown" m-dropdown-persistent="1">
                                 <a href="#" class="m-nav__link m-dropdown__toggle">
                                     <span class="m-nav__link-icon">
                                         <span class="m-nav__link-icon-wrapper">
@@ -58,7 +56,9 @@
                                             <form class="m-list-search__form">
                                                 <div class="m-list-search__form-wrapper">
                                                     <span class="m-list-search__form-input-wrapper">
-                                                        <input id="m_quicksearch_input" autocomplete="off" type="text" name="q" class="m-list-search__form-input" value="" placeholder="Search...">
+                                                        <input id="m_quicksearch_input" autocomplete="off" type="text"
+                                                            name="q" class="m-list-search__form-input" value=""
+                                                            placeholder="Search...">
                                                     </span>
                                                     <span class="m-list-search__form-icon-close" id="m_quicksearch_close">
                                                         <i class="la la-remove"></i>
@@ -67,7 +67,8 @@
                                             </form>
                                         </div>
                                         <div class="m-dropdown__body">
-                                            <div class="m-dropdown__scrollable m-scrollable" data-scrollable="true" data-max-height="300" data-mobile-max-height="200">
+                                            <div class="m-dropdown__scrollable m-scrollable" data-scrollable="true"
+                                                data-max-height="300" data-mobile-max-height="200">
                                                 <div class="m-dropdown__content"></div>
                                             </div>
                                         </div>
@@ -101,24 +102,29 @@
                                             <div class="m-dropdown__content">
                                                 <ul class="nav nav-tabs m-tabs m-tabs-line m-tabs-line--brand" role="tablist">
                                                     <li class="nav-item m-tabs__item">
-                                                        <a class="nav-link m-tabs__link active" data-toggle="tab" href="#topbar_notifications_notifications" role="tab">
+                                                        <a class="nav-link m-tabs__link active" data-toggle="tab" href="#topbar_notifications_notifications"
+                                                            role="tab">
                                                             Alerts
                                                         </a>
                                                     </li>
                                                     <li class="nav-item m-tabs__item">
-                                                        <a class="nav-link m-tabs__link" data-toggle="tab" href="#topbar_notifications_events" role="tab">
+                                                        <a class="nav-link m-tabs__link" data-toggle="tab" href="#topbar_notifications_events"
+                                                            role="tab">
                                                             Events
                                                         </a>
                                                     </li>
                                                     <li class="nav-item m-tabs__item">
-                                                        <a class="nav-link m-tabs__link" data-toggle="tab" href="#topbar_notifications_logs" role="tab">
+                                                        <a class="nav-link m-tabs__link" data-toggle="tab" href="#topbar_notifications_logs"
+                                                            role="tab">
                                                             Logs
                                                         </a>
                                                     </li>
                                                 </ul>
                                                 <div class="tab-content">
-                                                    <div class="tab-pane active" id="topbar_notifications_notifications" role="tabpanel">
-                                                        <div class="m-scrollable" data-scrollable="true" data-max-height="250" data-mobile-max-height="200">
+                                                    <div class="tab-pane active" id="topbar_notifications_notifications"
+                                                        role="tabpanel">
+                                                        <div class="m-scrollable" data-scrollable="true"
+                                                            data-max-height="250" data-mobile-max-height="200">
                                                             <div class="m-list-timeline m-list-timeline--skin-light">
                                                                 <div class="m-list-timeline__items">
                                                                     <div class="m-list-timeline__item">
@@ -210,7 +216,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="tab-pane" id="topbar_notifications_events" role="tabpanel">
-                                                        <div class="m-scrollable" data-scrollable="true" data-max-height="250" data-mobile-max-height="200">
+                                                        <div class="m-scrollable" data-scrollable="true"
+                                                            data-max-height="250" data-mobile-max-height="200">
                                                             <div class="m-list-timeline m-list-timeline--skin-light">
                                                                 <div class="m-list-timeline__items">
                                                                     <div class="m-list-timeline__item">
@@ -312,7 +319,8 @@
                                         </div>
                                         <div class="m-dropdown__body m-dropdown__body--paddingless">
                                             <div class="m-dropdown__content">
-                                                <div class="m-scrollable" data-scrollable="false" data-max-height="380" data-mobile-max-height="200">
+                                                <div class="m-scrollable" data-scrollable="false" data-max-height="380"
+                                                    data-mobile-max-height="200">
                                                     <div class="m-nav-grid m-nav-grid--skin-light">
                                                         <div class="m-nav-grid__row">
                                                             <a href="#" class="m-nav-grid__item">
@@ -353,8 +361,8 @@
                                 m-dropdown-toggle="click">
                                 <a href="#" class="m-nav__link m-dropdown__toggle">
                                     <span class="m-topbar__userpic">
-                                        <img src="{{asset('assets/app/media/img/users/user4.jpg')}}" class="m--img-rounded m--marginless m--img-centered" alt=""
-                                        />
+                                        <img src="{{asset('assets/app/media/img/users/user4.jpg')}}" class="m--img-rounded m--marginless m--img-centered"
+                                            alt="" />
                                     </span>
                                     <span class="m-nav__link-icon m-topbar__usericon  m--hide">
                                         <span class="m-nav__link-icon-wrapper">
@@ -371,7 +379,8 @@
                                         <div class="m-dropdown__header m--align-center" style="background: url(../../../assets/app/media/img/misc/user_profile_bg.jpg); background-size: cover;">
                                             <div class="m-card-user m-card-user--skin-light">
                                                 <div class="m-card-user__pic">
-                                                    <img src="{{asset('assets/app/media/img/users/user4.jpg')}}" class="m--img-rounded m--marginless" alt="" />
+                                                    <img src="{{asset('assets/app/media/img/users/user4.jpg')}}" class="m--img-rounded m--marginless"
+                                                        alt="" />
                                                 </div>
                                                 <div class="m-card-user__details">
                                                     <span class="m-card-user__name m--font-weight-500">
